@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-lazy-init="true"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean class="ru.javabegin.training.spring.impls.sony.SonyHead">
+		<property name="color" value="golden"/>
+		<qualifier value="sonyGoldenHead"></qualifier>
+	</bean>
+
+	<bean class="ru.javabegin.training.spring.impls.sony.SonyHead">
+	<property name="color" value="bronze"/>
+		<qualifier value="sonyBronzeHead"></qualifier>
+	</bean>
+	
+	
+	<bean id="sonyHand" class="ru.javabegin.training.spring.impls.sony.SonyHand"/>	
+	<bean id="sonyLeg" class="ru.javabegin.training.spring.impls.sony.SonyLeg" />
+
+	<bean class="ru.javabegin.training.spring.impls.sony.SonyHead"
+		id="SonyHead-X">
+	<property name="size" value="25"></property>
+	    <qualifier value="SonyHead-x"></qualifier>
+	</bean>
+
+
+</beans>
